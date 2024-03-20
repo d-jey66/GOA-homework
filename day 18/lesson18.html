@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programming Courses</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: lightgreen;
+    }
+    header {
+        background-color: lightgreen;
+        color: black;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav {
+        background-color: black;
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav a {
+        color: lightgreen;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+    nav a:hover {
+        background-color: lightgreen;
+        color: black;
+    }
+    section {
+        padding: 20px;
+    }
+    footer {
+        background-color: lightgreen;
+        color: black;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    p{
+        color: black;
+        margin-top: 10px;
+    }
+    h3{
+        color: black;
+        margin-top: 10px;
+    }
+    .d1{
+        background-color: lightgreen;
+        width: 670px;
+        height: 100px;
+        padding-left: 30px;
+        border-radius: 20px;
+        
+    }
+    .d2{
+        background-color: lightgreen;
+        width: 670px;
+        height: 100px;
+        padding-left: 30px;
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Programming Courses</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section id="home">
+        <h2>Welcome to our programming courses website!</h2>
+        <p>Explore our courses and start your journey to becoming a skilled programmer.</p>
+    </section>
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <div class="d1">
+        
+        <h3>Web Development</h3>
+        <p>in web development course you will learn html,css and javascript</p>
+        <p>starting from 100.00$</p>
+        </div>
+        <div class="d2">
+        
+        <h3>Back-End Development</h3>
+        <p>in Back-end development course you will learn databases,servers and API</p>
+        <p>starting from 100.00$</p>
+        </div>
+    </section>
+    <footer>
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+    </footer>
+</body>
+</html>
+

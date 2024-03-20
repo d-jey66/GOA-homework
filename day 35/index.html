@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: whitesmoke;
+            box-shadow: 0 0 4px;
+            height: 150px;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        h4:hover{
+            cursor: pointer;
+        }
+        h5:hover{
+            cursor: pointer;
+        }
+        h5{
+            margin-left: 50px;
+        }
+        h1{
+            margin-left: 270px;
+            font-size: xx-large;
+        }
+        .cart{
+            border: 3px solid yellow;
+            height: 55px;
+            width: 100px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-left: 440px;
+        }
+        .con{
+            position: absolute;
+            margin-top: 90px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        p{
+            font-weight: bold;
+            font-size:  larger;
+        }
+        p:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header">
+                <h4>shipping to Georgia</h4>
+                <h5 onclick="changeText()">GEL</h5>
+                <h1>FashionFlare</h1>
+                <div class="cart"><h3>CART (0)</h3></div>
+                
+                <div class="con">
+                    <p>☰</p><p style="margin-left: 90px;">New Arrivals</p><p style="margin-left: 90px;">Designers</p><p style="margin-left: 90px;">Clothing</p><p style="margin-left: 90px;">Footwear</p><p style="margin-left: 90px;">Accessories</p><p style="margin-left: 90px;">The Journal</p><p style="margin-left: 90px;">🔍</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+function changeText() {
+    var h5 = document.querySelector('h5');
+    if (h5.textContent === 'GEL') {
+        h5.textContent = 'EUR';
+    } else if (h5.textContent === 'EUR') {
+        h5.textContent = 'USD';
+    } else {
+        h5.textContent = 'GEL';
+    }
+}
+</script>
+</body>
+</html>
