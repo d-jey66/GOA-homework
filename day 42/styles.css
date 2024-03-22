@@ -1,0 +1,71 @@
+.line{
+    height: 100px;
+    width: 100%;
+    background-color: grey;
+    position: absolute;
+    left: 0;
+}
+
+.car{
+    width: 200px;
+    position: fixed;
+    top: 470px;
+    animation: car-rotate 10s infinite, car-move 10s infinite;
+    z-index: 1;
+}
+
+@keyframes car-rotate{
+    0% {
+        transform: rotateY(0deg);
+      }
+      10%{
+        transform: skewX(10deg);
+      }
+      38%{
+        transform: skewX(-10deg);
+      }
+      50% {
+        transform: rotateY(0deg) skewX(0deg);
+      }
+      51%{
+        transform: rotateY(180deg);
+      }
+      53%{
+        transform: skewX(-10deg) rotateY(180deg);
+      }
+      87%{
+        transform: skewX(10deg) rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(180deg);
+      }
+}
+
+@keyframes car-move {
+    0% {
+      left: 100px;
+    }
+    50%{
+        left: 850px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
+
+.grass{
+    background-color: green;
+    width: 100%;
+    height: 330px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+.tree{
+    position: absolute;
+    height: 250px;
+    bottom: -8px;
+    left: 1022px;
+}
