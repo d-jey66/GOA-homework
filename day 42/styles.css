@@ -10,7 +10,7 @@
     width: 200px;
     position: fixed;
     top: 470px;
-    animation: car-rotate 10s infinite, car-move 10s infinite;
+    animation: car-rotate 30s infinite, car-move 30s infinite;
     z-index: 1;
 }
 
