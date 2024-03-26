@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="apple.jpg" alt="" class="apple" style="width: 300px;">
+    <button onclick="ImageWidth()"><h4>make apple 300px</h4></button> <button onclick="ChangeImageWidth()"><h4>make image 500px</h4></button>
+    
+    <script>
+    function ImageWidth(){
+        document.querySelector('.apple').style.width = '300px'
+    }
+    function ChangeImageWidth(){
+        document.querySelector('.apple').style.width = '500px'
+    }
+      </script>
+</body>
+</html>
