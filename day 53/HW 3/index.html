@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraphs and Buttons</title>
+</head>
+<body>
+    <p class="paragraph">პირველი პარაგრაფი</p>
+    <p class="paragraph">მეორე პარაგრაფი</p>
+    <p class="paragraph">მესამე პარაგრაფი</p>
+    <button onclick="changeColorGreen()">მწვანე</button>
+    <button onclick="changeColorRed()">წითელი</button>
+    <button onclick="changeColorYellow()">ყვითელი</button>
+
+    <script>
+        function changeColorGreen() {
+            let paragraphs = document.getElementsByClassName('paragraph');
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = 'green';
+            }
+        }
+        function changeColorRed() {
+            let paragraphs = document.getElementsByClassName('paragraph');
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = 'Red';
+            }
+        }
+        function changeColorYellow() {
+            let paragraphs = document.getElementsByClassName('paragraph');
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = 'Yellow';
+            }
+        }
+    </script>
+</body>
+</html>

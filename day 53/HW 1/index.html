@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraphs and Button</title>
+</head>
+<body>
+    <p id="p1">პირველი პარაგრაფი</p>
+    <p id="p2">მეორე პარაგრაფი</p>
+    <p id="p3">მესამე პარაგრაფი</p>
+    <button onclick="switchText()">შეცვალე ტექსტები</button>
+
+    <script>
+        function switchText() {
+            let firstParagraph = document.getElementById('p1');
+            let secondParagraph = document.getElementById('p2');
+            let thirdParagraph = document.getElementById('p3');
+            let temp = firstParagraph.innerText;
+            firstParagraph.innerText = secondParagraph.innerText;
+            secondParagraph.innerText = thirdParagraph.innerText;
+            thirdParagraph.innerText = temp;
+        }
+    </script>
+</body>
+</html>
