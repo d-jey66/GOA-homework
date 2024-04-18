@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Form Example</title>
+    </head>
+    <body>
+        <form id="myForm">
+            <input type="text" id="input1">
+            <input type="text" id="input2">
+            <input type="text" id="input3">
+            <button type="submit">Submit</button>
+        </form>
+    
+        <script>
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                console.log(document.getElementById("input1").value);
+                console.log(document.getElementById("input2").value);
+                console.log(document.getElementById("input3").value);
+            });
+        </script>
+    </body>
+    </html>
+    
+</body>
+</html>
