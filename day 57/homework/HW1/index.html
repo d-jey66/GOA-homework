@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="color" name="color" placeholder="color"><br><br>
+        <input type="text" id="width" name="width" placeholder="width"><br><br>
+        <input type="text" id="height" name="height" placeholder="height"><br><br>
+        <input type="text" id="text" name="text" placeholder="text"><br><br>
+        <button type="button" onclick="submitInfo()">submit info</button>
+    </form>
+    <br><br>
+    <div class="info">
+        <p></p>
+    </div>
+
+    <script>
+        function submitInfo() {
+        var color = document.getElementById('color').value;
+        var width = document.getElementById('width').value;
+        var height = document.getElementById('height').value;
+        var text = document.getElementById('text').value;
+        
+        var infoDiv = document.querySelector('.info');
+        infoDiv.style.backgroundColor = color;
+        infoDiv.style.width = width + 'px';
+        infoDiv.style.height = height + 'px';
+        infoDiv.querySelector('p').textContent = text;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <input type="text" id="width-input" placeholder="Please enter width"/>
+        <input type="text" id="height-input" placeholder="Please enter height"/>
+        <input type="text" id="color-input" placeholder="Please enter color"/>
+        <button type="button" id="button" onclick="changeDiv()">Submit</button>
+    </form>
+
+    <div id="change-div"></div>
+
+    <script>
+        const widthInput = document.getElementById("width-input");
+        const heightInput = document.getElementById("height-input");
+        const colorInput = document.getElementById("color-input");
+        const div = document.getElementById("change-div");
+        const btn = document.getElementById("button");
+
+        function changeDiv(){
+            div.style.width = widthInput.value + "px";
+            div.style.height = heightInput.value + "px";
+            div.style.backgroundColor = colorInput.value;
+        }
+    </script>
+
+</body>
+</html>
