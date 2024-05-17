@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="text" id="text">
+    <input type="text" id="color">
+    <input type="text" id="background-color">
+    <button type="button" onclick="submitInfo()">submit info</button>
+    </form>
+    <p id="p"></p>
+    <script>
+        function submitInfo() {
+        var color = document.getElementById('color').value;
+        var background = document.getElementById('background-color').value;
+        var text = document.getElementById('text').value;
+        
+        var p = document.getElementById('p');
+        p.style.backgroundColor = background
+        p.style.color = color
+        p.textContent = text
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isValidCoupon(couponCode, totalAmount) {
+            return (
+                (couponCode === "SALE" || couponCode === "BIGSALE") && totalAmount >= 50 ||
+                couponCode === "LILSALE"
+            );
+        }
+
+        console.log(isValidCoupon("SALE", 60));      // true
+        console.log(isValidCoupon("BIGSALE", 50));   // true
+        console.log(isValidCoupon("SALE", 40));      // false
+        console.log(isValidCoupon("BIGSALE", 49));   // false
+        console.log(isValidCoupon("LILSALE", 10));   // true
+        console.log(isValidCoupon("NOSALE", 100));   // false
+    </script>
+</body>
+</html>

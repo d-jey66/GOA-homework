@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teenager Check</title>
+</head>
+<body>
+    <script>
+        function isTeenager() {
+            let age = parseInt(prompt('Please enter your age'), 10);
+            let hasPermission = confirm('Do you have permission to get a driving license?');
+
+            return (age >= 18 && hasPermission) || (age < 18 && !hasPermission);
+        }
+
+        console.log(isTeenager()); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="inp1">
+        <input type="number" id="inp2">
+        <input type="text" id="inp3">
+        <button type="submit" onclick="event.preventDefault(); calculate()">Submit</button>
+    </form>
+    <p id="par"></p>
+    <script>
+        function calculate(){
+            let inp1 = parseInt(document.getElementById('inp1').value);
+            let inp2 = parseInt(document.getElementById('inp2').value);
+            let inp3 = document.getElementById('inp3').value;
+            let result;
+
+            if(inp3 === '+'){
+                result = inp1 + inp2;
+            } else if(inp3 === '-'){
+                result = inp1 - inp2;
+            } else if(inp3 === '*'){
+                result = inp1 * inp2;
+            } else if(inp3 === '/'){
+                result = inp1 / inp2;
+            } else {
+                result = 'Invalid operation';
+            }
+
+            document.getElementById('par').textContent = result;
+        }
+    </script>
+</body>
+</html>
