@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number1 = parseFloat(prompt("შეიყვანეთ პირველი რიცხვი:"));
+        let number2 = parseFloat(prompt("შეიყვანეთ მეორე რიცხვი:"));
+
+        if (isNaN(number1) || isNaN(number2)) {
+            console.log("გთხოვთ შეიყვანოთ ვალიდური რიცხვები.");
+        }
+
+        let sum = number1 + number2;
+        let difference = number1 - number2;
+        let product = number1 * number2;
+        let quotient = number1 / number2;
+
+        console.log("ჯამი: " + sum);
+        console.log("სხვაობა: " + difference);
+        console.log("გამრავლება: " + product);
+        console.log("გაყოფა: " + quotient);
+    </script>
+</body>
+</html>
