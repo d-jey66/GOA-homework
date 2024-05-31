@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Creation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create A Bank Account</h1>
+        <form id="accountForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <label for="Password">Password:</label>
+            <input type="password" id="Password" name="Password" required autocomplete="new-password">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required autocomplete="cc-number">
+            <label for="cvc">CVC:</label>
+            <input type="text" id="cvc" name="cvc" required autocomplete="cc-csc">
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="text" id="expirationDate" name="expirationDate" required placeholder="MM/YY" autocomplete="cc-exp">
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('accountForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const Password = document.getElementById('Password').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            const cvc = document.getElementById('cvc').value;
+            const expirationDate = document.getElementById('expirationDate').value;
+
+            const account = {
+                name: name,
+                email: email,
+                Password: Password,
+                cardNumber: cardNumber,
+                cvc: cvc,
+                expirationDate: expirationDate
+            };
+
+            console.log('Account Created:', account);
+            
+            document.getElementById('accountForm').reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        .profile {
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body bgcolor="#121212">
+
+<div class="profile">
+    <h2 id="name">Name</h2>
+    <p id="surname">Surname</p>
+    <p id="age">Age</p>
+    <p id="birthdate">Birthdate</p>
+</div>
+
+<script>
+    var name = prompt("Enter your name:");
+    var surname = prompt("Enter your surname:");
+    var age = prompt("Enter your age:");
+    var birthdate = prompt("Enter your birthdate (YYYY-MM-DD):");
+
+    document.getElementById('name').textContent = 'Name: ' + name;
+    document.getElementById('surname').textContent = 'Surname: ' + surname;
+    document.getElementById('age').textContent = 'Age: ' + age;
+    document.getElementById('birthdate').textContent = 'Birthdate: ' + birthdate;
+</script>
+
+</body>
+</html>
