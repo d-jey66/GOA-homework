@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პაროლის შემოწმება</title>
+    <script>
+        function checkPassword() {
+            const correctPassword = "123456";
+            let userPassword = "";
+            while (userPassword !== correctPassword) {
+                userPassword = prompt("შეიყვანეთ პაროლი:");
+                if (userPassword == correctPassword) {
+                    console.log("sucsessfuly logged in");
+                }
+                else{
+                console.log('password is incorrect')
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+</body>
+</html>
