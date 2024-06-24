@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(model, currentSpeed, maxSpeed) {
+            this.model = model;
+            this.currentSpeed = currentSpeed;
+            this.maxSpeed = maxSpeed;
+
+            this.accelerate = function() {
+                this.currentSpeed += 10;
+            };
+
+            this.decelerate = function() {
+                if (this.currentSpeed > 0) {
+                    this.currentSpeed -= 10;
+                }
+                if (this.currentSpeed === 0) {
+                    console.log("The car is already at a complete stop. Cannot reduce speed further.");
+                }
+            };
+
+            this.printInfo = function() {
+                console.log(`Model: ${this.model}, Current Speed: ${this.currentSpeed} km/h, Max Speed: ${this.maxSpeed} km/h`);
+            };
+        }
+
+        let car1 = new Car("Toyota Camry", 30, 180);
+        let car2 = new Car("Honda Civic", 20, 200);
+        let car3 = new Car("BMW X5", 40, 250);
+        let car4 = new Car("Audi A4", 50, 220);
+        let car5 = new Car("Mercedes-Benz E-Class", 35, 240);
+
+        car1.printInfo();
+        car2.printInfo();
+
+        car3.accelerate();
+        car3.printInfo();
+
+        car4.decelerate();
+        car4.printInfo();
+
+        car5.decelerate();
+        car5.printInfo();
+    </script>
+</body>
+</html>
