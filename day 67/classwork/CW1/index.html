@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruitsArray = new Array(5);
+        fruitsArray[0] = 'apple';
+        fruitsArray[1] = 'banana';
+        fruitsArray[2] = 'cherry';
+        fruitsArray[3] = 'date';
+        fruitsArray[4] = 'elderberry';
+
+        let colorsArray = ['red', 'green', 'blue', 'yellow', 'purple'];
+
+        fruitsArray[2] = 'kiwi';
+        colorsArray[1] = 'orange';
+
+        console.log(fruitsArray[2]);
+        console.log(colorsArray[1]);
+
+        fruitsArray.push('fig');
+        colorsArray.push('cyan');
+
+        let lastFruit = fruitsArray.pop();
+        let lastColor = colorsArray.pop();
+
+        console.log(fruitsArray);
+        console.log(colorsArray);
+        console.log(lastFruit);
+        console.log(lastColor);
+    </script>
+</body>
+</html>

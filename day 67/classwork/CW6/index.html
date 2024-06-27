@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mainArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        let evenArray = [];
+        let oddArray = [];
+
+        for (let i = 0; i < mainArray.length; i++) {
+            if (mainArray[i] % 2 === 0) {
+                evenArray.push(mainArray[i]);
+            } else {
+                oddArray.push(mainArray[i]);
+            }
+        }
+
+        console.log("Main Array: ", mainArray);
+        console.log("Even Numbers Array: ", evenArray);
+        console.log("Odd Numbers Array: ", oddArray);
+    </script>
+</body>
+</html>
