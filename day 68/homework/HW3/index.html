@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dateTimeDisplay"></div>
+    <script>
+        // 1
+        function countdown(seconds) {
+            const intervalId = setInterval(() => {
+                console.log(seconds);
+                seconds--;
+                if (seconds < 0) {
+                    clearInterval(intervalId);
+                    console.log("Time's up!");
+                }
+            }, 1000);
+        }
+
+        countdown(10);
+
+        // 2
+        function digitalClock() {
+            setInterval(() => {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                console.log(`${hours}:${minutes}:${seconds}`);
+            }, 1000);
+        }
+
+        digitalClock();
+
+        // 3
+        function randomEveryTwoSeconds() {
+            setInterval(() => {
+                const randomNum = Math.floor(Math.random() * 100) + 1;
+                console.log(randomNum);
+            }, 2000);
+        }
+
+        randomEveryTwoSeconds();
+
+        // 4
+        function updateDateTime() {
+            const now = new Date();
+            const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+            const time = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+            document.getElementById('dateTimeDisplay').innerText = `${date} ${time}`;
+        }
+
+        setInterval(updateDateTime, 1000);
+
+        // 5
+        function randomWordFromArray(words) {
+            setInterval(() => {
+                const randomIndex = Math.floor(Math.random() * words.length);
+                console.log(words[randomIndex]);
+            }, 2000);
+        }
+
+        const words = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+        randomWordFromArray(words);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="successMessage" style="display: none;">Success!</div>
+    <script>
+        // 1
+        setTimeout(() => {
+            alert("Hello!");
+        }, 2000);
+
+        // 2
+        function countdownFromFive() {
+            let count = 5;
+            const intervalId = setInterval(() => {
+                console.log(count);
+                count--;
+                if (count < 1) {
+                    clearInterval(intervalId);
+                }
+            }, 1000);
+        }
+
+        countdownFromFive();
+
+        // 3
+        const successMessage = document.getElementById('successMessage');
+
+        setTimeout(() => {
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }, 0);
+    </script>
+</body>
+</html>
