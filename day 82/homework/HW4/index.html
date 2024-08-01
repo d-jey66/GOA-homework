@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const elmntName = prompt('Enter The Name Of The Element.');
+        const elmntTxt = prompt('Enter The Text In The Element.');
+
+        const newElement = document.createElement(elmntName);
+
+        newElement.textContent = elmntTxt;
+
+        document.body.appendChild(newElement);
+    </script>
+</body>
+</html>

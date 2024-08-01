@@ -1,0 +1,1 @@
+// W3 school-is recourcestvis unda gadamexeda
