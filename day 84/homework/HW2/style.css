@@ -1,0 +1,20 @@
+.parent {
+    background-color: red;
+    width: 600px;
+    height: 600px;
+    position: fixed;
+    left: 468px;
+    top: 64.5px;
+    border: 4px solid;
+}
+.child {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    font-size: 50px;
+    border: 4px solid;
+}
+#emoji {
+    margin: 0;
+}

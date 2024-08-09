@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .parent-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            background-color: #f0f0f0;
+        }
+
+        #animatedDiv {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+        <div id="animatedDiv"></div>
+    </div>
+
+    <script>
+        const div = document.getElementById('animatedDiv');
+        const container = document.querySelector('.parent-container');
+
+        let x = 0;
+        let y = 0;
+        const step = 2;
+        const interval = 10;
+        const maxX = container.clientWidth - div.clientWidth;
+        const maxY = container.clientHeight - div.clientHeight;
+
+        const directions = ['right', 'down', 'left', 'up'];
+        let currentDirection = 0;
+
+        function moveDiv() {
+            switch (directions[currentDirection]) {
+                case 'right':
+                    x += step;
+                    if (x >= maxX) {
+                        x = maxX;
+                        currentDirection = (currentDirection + 1) % 4;
+                    }
+                    break;
+                case 'down':
+                    y += step;
+                    if (y >= maxY) {
+                        y = maxY;
+                        currentDirection = (currentDirection + 1) % 4;
+                    }
+                    break;
+                case 'left':
+                    x -= step;
+                    if (x <= 0) {
+                        x = 0;
+                        currentDirection = (currentDirection + 1) % 4;
+                    }
+                    break;
+                case 'up':
+                    y -= step;
+                    if (y <= 0) {
+                        y = 0;
+                        currentDirection = (currentDirection + 1) % 4;
+                    }
+                    break;
+            }
+            div.style.left = x + 'px';
+            div.style.top = y + 'px';
+        }
+
+        setInterval(moveDiv, interval);
+    </script>
+</body>
+</html>
