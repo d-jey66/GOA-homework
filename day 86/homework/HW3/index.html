@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;  
+            gap: 10px;
+        }
+
+        .event-button {
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 10px;
+        }
+
+        .click { background-color: #ff6347; }
+        .mouseover { background-color: #4682b4; }
+        .mouseout { background-color: #32cd32; }
+        .mousedown { background-color: #ff69b4; }
+        .load { background-color: #ffa500; }
+    </style>
+</head>
+<body onload="pageLoaded()">
+
+    <button class="event-button click" onclick="clicked()">click me</button>
+    <button class="event-button mouseover" onmouseover="mouseOver()">put mouse on me</button>
+    <button class="event-button mouseout" onmouseout="mouseOut()">put away the mouse from me</button>
+    <button class="event-button mousedown" onmousedown="mouseDown()">click</button>
+
+    <script>
+        function pageLoaded() {
+            console.log('გვერდი ჩაიტვირთა!');
+        }
+
+        function clicked() {
+            console.log('დააკლიკეთ ღილაკს!');
+        }
+
+        function mouseOver() {
+            console.log('მოიტანეთ მაუსი ღილაკზე!');
+        }
+
+        function mouseOut() {
+            console.log('გაიწიეთ მაუსი ღილაკიდან!');
+        }
+
+        function mouseDown() {
+            console.log('დაჭერეთ მაუსის ღილაკი!');
+        }
+    </script>
+
+</body>
+</html>

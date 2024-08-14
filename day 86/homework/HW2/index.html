@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Capturing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFACD;
+            text-align: center;
+            padding: 50px;
+        }
+        img {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Photo Capturing</h1>
+    <img id="photo" src="https://picsum.photos/800/400?random=1" alt="Photo">
+    <div class="buttons">
+        <button onclick="prevPhoto()">Previous</button>
+        <button onclick="nextPhoto()">Next</button>
+    </div>
+
+    <script>
+        let photos = [
+            "https://picsum.photos/800/400?random=1",
+            "https://picsum.photos/800/400?random=2",
+            "https://picsum.photos/800/400?random=3"
+        ]; 
+        let currentPhoto = 0;
+
+        function showPhoto(index) {
+            document.getElementById('photo').src = photos[index];
+        }
+
+        function nextPhoto() {
+            currentPhoto = (currentPhoto + 1) % photos.length;
+            showPhoto(currentPhoto);
+        }
+
+        function prevPhoto() {
+            currentPhoto = (currentPhoto - 1 + photos.length) % photos.length;
+            showPhoto(currentPhoto);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Functions with CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body onload="f1()">
+
+    <button onclick="f2()">Click me</button>
+    <button onmouseover="f3()">Hover over me</button>
+    <button onmouseout="f4()">Move mouse out</button>
+    <button onmousedown="f5()">Press me</button>
+
+    <script>
+        function f1() {
+            console.log("page loaded");
+        }
+
+        function f2() {
+            console.log("clicked");
+        }
+
+        function f3() {
+            console.log("hovered");
+        }
+
+        function f4() {
+            console.log("unhovered");
+        }
+
+        function f5() {
+            console.log("pressed");
+        }
+    </script>
+
+</body>
+</html>
