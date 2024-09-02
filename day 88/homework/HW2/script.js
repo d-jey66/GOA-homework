@@ -12,6 +12,7 @@ function handleAdd() {
     newDiv.innerHTML = `
         <form class="box-container">
             <div class="box-bar">
+                <span class="number" style="float: left; margin-left: 10px; margin-top: 2px;"></span>
                 <span id="x">&#10005;</span>
             </div>
             <textarea name="ta" id="ta" placeholder="Enter text..."></textarea>
@@ -27,10 +28,13 @@ function handleAdd() {
 
     mainContainer.appendChild(newDiv);
 
+    updateNumbers(); 
+
     exitElement.addEventListener("click", handleRemove);
 
     function handleRemove() {
         boxContainer.parentElement.remove();
+        updateNumbers(); 
     }
 
     boxValue.addEventListener("mousedown", handleMouseDown);
@@ -61,10 +65,26 @@ function handleAdd() {
             document.removeEventListener("mousemove", handleMove);
             document.removeEventListener("mouseup", handleMoveUp);
         }
+
         let TC = document.getElementById('color1').value;
         let BC = document.getElementById('color2').value;
 
         txtArea.style.color = TC;
         boxContainer.style.border = `${'3px solid ' + BC}`
     }
+}
+
+function updateNumbers() {
+    const allTextareas = document.querySelectorAll('.main-box-container .box-bar .number');
+    allTextareas.forEach((element, index) => {
+        element.textContent = index + 1;
+    });
+}
+//here it logs 10000 with + / and *
+
+let count = 0;
+
+function handleAdd() {
+    count++;
+    console.log(count);
 }
