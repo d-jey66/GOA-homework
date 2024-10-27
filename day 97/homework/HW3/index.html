@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Word</title>
+</head>
+<body>
+    <p id="text">This is a simple text with some highlighted words.</p>
+
+    <script>
+        function highlightWord(word) {
+            const paragraph = document.getElementById("text");
+            const regex = new RegExp(`(${word})`, 'gi');
+            paragraph.innerHTML = paragraph.innerHTML.replace(regex, '<mark>$1</mark>');
+        }
+            
+        highlightWord("highlighted");
+    </script>
+</body>
+</html>
