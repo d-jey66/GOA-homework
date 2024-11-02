@@ -1,17 +1,21 @@
 function Header() {
+  return (
+    <div className="flex flex-col md:flex-row justify-between items-center px-6 pt-3 shadow-md">
+      <img
+        src="https://i.pinimg.com/originals/18/a5/6c/18a56c95cc67e9cd3db848bb93f48b7e.png"
+        alt="Logo"
+        className="w-[80px] md:w-[100px] mb-2 md:mb-0"
+      />
+      <ul className="flex flex-col md:flex-row gap-6 md:gap-[40px] mt-4 md:mt-0">
+        <li className="cursor-pointer text-center md:text-left">Home</li>
+        <li className="cursor-pointer text-center md:text-left">About</li>
+        <li className="cursor-pointer text-center md:text-left">Contact</li>
+      </ul>
+      <button className="bg-slate-200 h-10 w-full md:w-20 mt-4 md:mt-0 rounded-[5px]">
+        Sign In
+      </button>
+    </div>
+  );
+}
 
-    return (
-      <div className="flex flex-row justify-between px-[30px] pt-3 shadow-md">
-        <img src="https://i.pinimg.com/originals/18/a5/6c/18a56c95cc67e9cd3db848bb93f48b7e.png" alt="" className="w-[100px] mb-2" />
-        <ul className="flex flex-row gap-[40px] relative top-[30px]">
-            <li className="cursor-pointer">home</li>
-            <li className="cursor-pointer">about</li>
-            <li className="cursor-pointer">contact</li>
-        </ul>
-        <button className="bg-slate-200 h-11 w-20 relative top-4 rounded-[5px]">sign-in</button>
-      </div>
-    )
-  }
-  
-  export default Header
-  
+export default Header;
