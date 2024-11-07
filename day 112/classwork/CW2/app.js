@@ -7,7 +7,6 @@ const server = http.createServer((req, res) => {
         res.end("Welcome to the homepage!");
     } else if (req.url === "/about") {
         const aboutContent = "<h1>This is information about me</h1>";
-        // დაწერა about გვერდის შინაარსი ფაილში
         fs.writeFile('about.txt', aboutContent, (err) => {
             if (err) {
                 console.error('Error writing about file:', err.message);
@@ -17,7 +16,6 @@ const server = http.createServer((req, res) => {
         res.end(aboutContent);
     } else if (req.url === "/dashboard") {
         const dashboardContent = "<h1>Welcome to the dashboard</h1>";
-        // დაწერა dashboard გვერდის შინაარსი ფაილში
         fs.writeFile('dashboard.txt', dashboardContent, (err) => {
             if (err) {
                 console.error('Error writing dashboard file:', err.message);
