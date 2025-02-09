@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@tailwind base;
+@font-face{
+    font-family: big-over;
+    src: url("../fonts/big-over/BigerOver-6Y4wx.otf")
+}
+
+.text-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './index.css';
 
 const MovieCard = ({ movie }) => (
   <div className="bg-black border-2 border-yellow-500 text-yellow-300 rounded-lg p-2 m-2 w-52 transform transition hover:scale-105">
